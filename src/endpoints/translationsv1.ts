@@ -15,7 +15,7 @@ const Roblox_Web_WebAPI_Models_ApiArrayResponse_Roblox_Translations_Api_Translat
  * @param consumerType The consumer type.
  */
 export const getTranslations = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/translations',
   baseUrl: 'https://translations.roblox.com',
   requestFormat: 'json',
@@ -66,7 +66,7 @@ export const getTranslations = endpoint({
  * @param consumerType The consumer type.
  */
 export const getTranslationsLocale = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/translations/:locale',
   baseUrl: 'https://translations.roblox.com',
   requestFormat: 'json',
@@ -124,7 +124,7 @@ export const getTranslationsLocale = endpoint({
  * @param localeCode
  */
 export const getTranslationsLanguageResources = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/translations/language-resources',
   baseUrl: 'https://translations.roblox.com',
   requestFormat: 'json',

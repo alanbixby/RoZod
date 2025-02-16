@@ -164,7 +164,7 @@ const Roblox_Friends_Api_FriendshipRequestModel = z.object({
  * @param targetContactId The target contact Id for friend request
  */
 export const postContactsTargetcontactidRequestFriendship = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/contacts/:targetContactId/request-friendship',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -208,7 +208,7 @@ export const postContactsTargetcontactidRequestFriendship = endpoint({
  * @param targetUserId
  */
 export const getMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/metadata',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -229,7 +229,7 @@ export const getMetadata = endpoint({
  * @summary Get the number of friends a user has
  */
 export const getMyFriendsCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/my/friends/count',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -249,7 +249,7 @@ export const getMyFriendsCount = endpoint({
  * @param sortOrder Sorted by scoring requests based on request time, mutual friends, and request origin
  */
 export const getMyFriendsRequests = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/my/friends/requests',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -303,7 +303,7 @@ export const getMyFriendsRequests = endpoint({
  * @param body The userIds potentially being followed
  */
 export const postUserFollowingExists = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/user/following-exists',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -337,7 +337,7 @@ export const postUserFollowingExists = endpoint({
  * @summary Return the number of pending friend requests.
  */
 export const getUserFriendRequestsCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/user/friend-requests/count',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -354,7 +354,7 @@ export const getUserFriendRequestsCount = endpoint({
  * @summary Decline all pending friend requests for the authenticated user.
  */
 export const postUserFriendRequestsDeclineAll = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/user/friend-requests/decline-all',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -376,7 +376,7 @@ export const postUserFriendRequestsDeclineAll = endpoint({
  * @param body The user ids to check against with the requesting user.
  */
 export const postUserMultigetAreFriends = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/user/multiget-are-friends',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -407,7 +407,7 @@ export const postUserMultigetAreFriends = endpoint({
  * @param requesterUserId The user Id of the requester
  */
 export const postUsersRequesteruseridAcceptFriendRequest = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:requesterUserId/accept-friend-request',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -445,7 +445,7 @@ export const postUsersRequesteruseridAcceptFriendRequest = endpoint({
  * @param requesterUserId The user Id of the requester
  */
 export const postUsersRequesteruseridDeclineFriendRequest = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:requesterUserId/decline-friend-request',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -481,7 +481,7 @@ export const postUsersRequesteruseridDeclineFriendRequest = endpoint({
  * @param senderUserId The user id of the sender of the off network friend request
  */
 export const postUsersSenderuseridAcceptFriendRequestWithToken = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:senderUserId/accept-friend-request-with-token',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -524,7 +524,7 @@ export const postUsersSenderuseridAcceptFriendRequestWithToken = endpoint({
  * @param targetUserId
  */
 export const postUsersTargetuseridFollow = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:targetUserId/follow',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -572,7 +572,7 @@ export const postUsersTargetuseridFollow = endpoint({
  * @param sortOrder The order the results are sorted in.
  */
 export const getUsersTargetuseridFollowers = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:targetUserId/followers',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -626,7 +626,7 @@ export const getUsersTargetuseridFollowers = endpoint({
  * @param targetUserId
  */
 export const getUsersTargetuseridFollowersCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:targetUserId/followers/count',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -655,7 +655,7 @@ export const getUsersTargetuseridFollowersCount = endpoint({
  * @param sortOrder The order the results are sorted in.
  */
 export const getUsersTargetuseridFollowings = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:targetUserId/followings',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -709,7 +709,7 @@ export const getUsersTargetuseridFollowings = endpoint({
  * @param targetUserId
  */
 export const getUsersTargetuseridFollowingsCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:targetUserId/followings/count',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -736,7 +736,7 @@ export const getUsersTargetuseridFollowingsCount = endpoint({
  * @param targetUserId The target user Id for friend request
  */
 export const postUsersTargetuseridRequestFriendship = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:targetUserId/request-friendship',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -786,7 +786,7 @@ export const postUsersTargetuseridRequestFriendship = endpoint({
  * @param targetUserId
  */
 export const postUsersTargetuseridUnfollow = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:targetUserId/unfollow',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -829,7 +829,7 @@ export const postUsersTargetuseridUnfollow = endpoint({
  * @param targetUserId The target user id to unfriend
  */
 export const postUsersTargetuseridUnfriend = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:targetUserId/unfriend',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -864,7 +864,7 @@ export const postUsersTargetuseridUnfriend = endpoint({
  * @param userSort Specifies how to sort the returned friends.
  */
 export const getUsersUseridFriends = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -895,7 +895,7 @@ export const getUsersUseridFriends = endpoint({
  * @param userId
  */
 export const getUsersUseridFriendsCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends/count',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -924,7 +924,7 @@ export const getUsersUseridFriendsCount = endpoint({
  * @param limit The number of results per request.
  */
 export const getUsersUseridFriendsFind = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends/find',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -973,7 +973,7 @@ export const getUsersUseridFriendsFind = endpoint({
  * @param userId The user Id to get the friends for.
  */
 export const getUsersUseridFriendsInactive = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends/inactive',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -1005,7 +1005,7 @@ export const getUsersUseridFriendsInactive = endpoint({
  * @param userSort
  */
 export const getUsersUseridFriendsOnline = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends/online',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -1044,7 +1044,7 @@ export const getUsersUseridFriendsOnline = endpoint({
  * @param limit The number of results per request.
  */
 export const getUsersUseridFriendsSearch = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends/search',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',
@@ -1091,7 +1091,7 @@ export const getUsersUseridFriendsSearch = endpoint({
  * @param userIds
  */
 export const getUsersUseridFriendsStatuses = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/friends/statuses',
   baseUrl: 'https://friends.roblox.com',
   requestFormat: 'json',

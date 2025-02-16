@@ -82,7 +82,7 @@ const Roblox_Web_WebAPI_Models_ApiArrayResponse_Roblox_Groups_Api_GroupMembershi
  * @description If a group comes back as null, it will not be returned in the response.
  */
 export const getGroups = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/groups',
   baseUrl: 'https://groups.roblox.com',
   requestFormat: 'json',
@@ -112,7 +112,7 @@ export const getGroups = endpoint({
  * @param sortOrder Sorted by group wall post Id
  */
 export const getGroupsGroupidWallPosts = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/groups/:groupId/wall/posts',
   baseUrl: 'https://groups.roblox.com',
   requestFormat: 'json',
@@ -161,7 +161,7 @@ export const getGroupsGroupidWallPosts = endpoint({
  * @param groupId The group id.
  */
 export const postGroupsGroupidWallPosts = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/groups/:groupId/wall/posts',
   baseUrl: 'https://groups.roblox.com',
   requestFormat: 'json',
@@ -205,7 +205,7 @@ export const postGroupsGroupidWallPosts = endpoint({
  * @param includeNotificationPreferences
  */
 export const getUsersUseridGroupsRoles = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/users/:userId/groups/roles',
   baseUrl: 'https://groups.roblox.com',
   requestFormat: 'json',

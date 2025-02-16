@@ -141,7 +141,7 @@ const Roblox_AccountSettings_Api_SendVerifyEmailRequest = z.object({
  * @summary Get a user's current account country setting.
  */
 export const getAccountSettingsAccountCountry = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/account/settings/account-country',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -159,7 +159,7 @@ export const getAccountSettingsAccountCountry = endpoint({
  * @param body
  */
 export const postAccountSettingsAccountCountry = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/account/settings/account-country',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -198,7 +198,7 @@ export const postAccountSettingsAccountCountry = endpoint({
  * @summary Returns metadata used by the account settings page
  */
 export const getAccountSettingsMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/account/settings/metadata',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -215,7 +215,7 @@ export const getAccountSettingsMetadata = endpoint({
  * @summary Get a user's app chat privacy setting
  */
 export const getAppChatPrivacy = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/app-chat-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -233,7 +233,7 @@ export const getAppChatPrivacy = endpoint({
  * @param body
  */
 export const postAppChatPrivacy = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/app-chat-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -266,7 +266,7 @@ export const postAppChatPrivacy = endpoint({
  * @summary Gets the authenticated user's email address and verified status
  */
 export const getEmail = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/email',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -284,7 +284,7 @@ export const getEmail = endpoint({
  * @param body The request body.
  */
 export const postEmail = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/email',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -333,7 +333,7 @@ export const postEmail = endpoint({
  * @param body The request body.
  */
 export const patchEmail = endpoint({
-  method: 'patch',
+  method: 'PATCH',
   path: '/v1/email',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -382,7 +382,7 @@ export const patchEmail = endpoint({
  * @param body The request body.
  */
 export const postEmailVerify = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/email/verify',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -427,7 +427,7 @@ export const postEmailVerify = endpoint({
  * @summary Get a user's game chat privacy setting
  */
 export const getGameChatPrivacy = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/game-chat-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -445,7 +445,7 @@ export const getGameChatPrivacy = endpoint({
  * @param body
  */
 export const postGameChatPrivacy = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/game-chat-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -478,7 +478,7 @@ export const postGameChatPrivacy = endpoint({
  * @summary Get a user's inventory privacy setting
  */
 export const getInventoryPrivacy = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/inventory-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -496,7 +496,7 @@ export const getInventoryPrivacy = endpoint({
  * @param body
  */
 export const postInventoryPrivacy = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/inventory-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -527,7 +527,7 @@ export const postInventoryPrivacy = endpoint({
  * @summary Get a user's private message privacy setting
  */
 export const getPrivateMessagePrivacy = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/private-message-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -545,7 +545,7 @@ export const getPrivateMessagePrivacy = endpoint({
  * @param body
  */
 export const postPrivateMessagePrivacy = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/private-message-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -580,7 +580,7 @@ export const postPrivateMessagePrivacy = endpoint({
  * @param consumerId The consumer's theme configuration to get. If the consumerType is User always return the AuthenticatedUser's theme type.
  */
 export const getThemesConsumertypeConsumerid = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/themes/:consumerType/:consumerId',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -616,7 +616,7 @@ export const getThemesConsumertypeConsumerid = endpoint({
  * @param consumerId The consumer's theme configuration to modify. If the consumerType is User always modify the AuthenticatedUser's theme type.
  */
 export const patchThemesConsumertypeConsumerid = endpoint({
-  method: 'patch',
+  method: 'PATCH',
   path: '/v1/themes/:consumerType/:consumerId',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -655,7 +655,7 @@ export const patchThemesConsumertypeConsumerid = endpoint({
  * @summary returns all the enabled theme types.
  */
 export const getThemesTypes = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/themes/types',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -667,7 +667,7 @@ export const getThemesTypes = endpoint({
  * @summary Get a user's trade privacy setting
  */
 export const getTradePrivacy = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/trade-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -685,7 +685,7 @@ export const getTradePrivacy = endpoint({
  * @param body
  */
 export const postTradePrivacy = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trade-privacy',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -718,7 +718,7 @@ export const postTradePrivacy = endpoint({
  * @summary Get a user's trade quality filter setting
  */
 export const getTradeValue = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/trade-value',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -736,7 +736,7 @@ export const getTradeValue = endpoint({
  * @param body
  */
 export const postTradeValue = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trade-value',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -770,7 +770,7 @@ export const postTradeValue = endpoint({
  * @param userId The user ID to block.
  */
 export const postUsersUseridBlock = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:userId/block',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -812,7 +812,7 @@ export const postUsersUseridBlock = endpoint({
  * @param userId The user ID to unblock.
  */
 export const postUsersUseridUnblock = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/users/:userId/unblock',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -852,7 +852,7 @@ export const postUsersUseridUnblock = endpoint({
  * @summary Gets all blocked users.
  */
 export const getUsersGetBlockedUsers = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/get-blocked-users',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',
@@ -869,7 +869,7 @@ export const getUsersGetBlockedUsers = endpoint({
  * @summary Gets all blocked users with details.
  */
 export const getUsersGetDetailedBlockedUsers = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/get-detailed-blocked-users',
   baseUrl: 'https://accountsettings.roblox.com',
   requestFormat: 'json',

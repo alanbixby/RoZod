@@ -284,7 +284,7 @@ const Roblox_Catalog_Api_Topics_TopicResponse = z.object({
  * @summary Lists a mapping for assets to category IDs to convert from inventory ID to catalog ID. Creates a mapping to link 'Get More' button in inventory page to the relevant catalog page.
  */
 export const getAssetToCategory = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/asset-to-category',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -296,7 +296,7 @@ export const getAssetToCategory = endpoint({
  * @summary Lists a mapping for assets to subcategory IDs to convert from inventory ID to catalog ID. Creates a mapping to link 'Get More' button in inventory page to the relevant catalog page.
  */
 export const getAssetToSubcategory = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/asset-to-subcategory',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -312,7 +312,7 @@ export const getAssetToSubcategory = endpoint({
  * @param sortOrder The order the results are sorted in.
  */
 export const getAssetsAssetidBundles = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/assets/:assetId/bundles',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -357,7 +357,7 @@ export const getAssetsAssetidBundles = endpoint({
  * @param bundleId
  */
 export const getBundlesBundleidDetails = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/bundles/:bundleId/details',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -385,7 +385,7 @@ export const getBundlesBundleidDetails = endpoint({
  * @param numItems The number of recommended items to return.
  */
 export const getBundlesBundleidRecommendations = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/bundles/:bundleId/recommendations',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -419,7 +419,7 @@ export const getBundlesBundleidRecommendations = endpoint({
  * @param bundleIds
  */
 export const getBundlesDetails = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/bundles/details',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -446,7 +446,7 @@ export const getBundlesDetails = endpoint({
  * @param body Roblox.Catalog.Api.MultigetItemDetailsRequestModel
  */
 export const postCatalogItemsDetails = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/catalog/items/details',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -477,7 +477,7 @@ export const postCatalogItemsDetails = endpoint({
  * @summary Lists Category Names and their Ids
  */
 export const getCategories = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/categories',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -490,7 +490,7 @@ export const getCategories = endpoint({
  * @param assetId
  */
 export const getFavoritesAssetsAssetidCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/favorites/assets/:assetId/count',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -516,7 +516,7 @@ export const getFavoritesAssetsAssetidCount = endpoint({
  * @param bundleId
  */
 export const getFavoritesBundlesBundleidCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/favorites/bundles/:bundleId/count',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -543,7 +543,7 @@ export const getFavoritesBundlesBundleidCount = endpoint({
  * @param assetId
  */
 export const getFavoritesUsersUseridAssetsAssetidFavorite = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/favorites/users/:userId/assets/:assetId/favorite',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -579,7 +579,7 @@ export const getFavoritesUsersUseridAssetsAssetidFavorite = endpoint({
  * @param assetId
  */
 export const postFavoritesUsersUseridAssetsAssetidFavorite = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/favorites/users/:userId/assets/:assetId/favorite',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -628,7 +628,7 @@ export const postFavoritesUsersUseridAssetsAssetidFavorite = endpoint({
  * @param assetId
  */
 export const deleteFavoritesUsersUseridAssetsAssetidFavorite = endpoint({
-  method: 'delete',
+  method: 'DELETE',
   path: '/v1/favorites/users/:userId/assets/:assetId/favorite',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -677,7 +677,7 @@ export const deleteFavoritesUsersUseridAssetsAssetidFavorite = endpoint({
  * @param bundleId
  */
 export const getFavoritesUsersUseridBundlesBundleidFavorite = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/favorites/users/:userId/bundles/:bundleId/favorite',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -713,7 +713,7 @@ export const getFavoritesUsersUseridBundlesBundleidFavorite = endpoint({
  * @param bundleId
  */
 export const postFavoritesUsersUseridBundlesBundleidFavorite = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/favorites/users/:userId/bundles/:bundleId/favorite',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -762,7 +762,7 @@ export const postFavoritesUsersUseridBundlesBundleidFavorite = endpoint({
  * @param bundleId
  */
 export const deleteFavoritesUsersUseridBundlesBundleidFavorite = endpoint({
-  method: 'delete',
+  method: 'DELETE',
   path: '/v1/favorites/users/:userId/bundles/:bundleId/favorite',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -816,7 +816,7 @@ After 5/31/2024, only cursor based pagination will be supported.
  * @param isPrevious 
  */
 export const getFavoritesUsersUseridFavoritesSubtypeidBundles = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/favorites/users/:userId/favorites/:subtypeId/bundles',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -881,7 +881,7 @@ export const getFavoritesUsersUseridFavoritesSubtypeidBundles = endpoint({
  * @summary Lists Subcategory Names and their Ids
  */
 export const getSubcategories = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/subcategories',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -893,7 +893,7 @@ export const getSubcategories = endpoint({
  * @param body
  */
 export const postTopicGetTopics = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/topic/get-topics',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -919,7 +919,7 @@ export const postTopicGetTopics = endpoint({
  * @param sortOrder Sorted by bundle
  */
 export const getUsersUseridBundles = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/bundles',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',
@@ -966,7 +966,7 @@ export const getUsersUseridBundles = endpoint({
  * @param sortOrder The order the results are sorted in.
  */
 export const getUsersUseridBundlesBundletype = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/bundles/:bundleType',
   baseUrl: 'https://catalog.roblox.com',
   requestFormat: 'json',

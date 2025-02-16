@@ -77,7 +77,7 @@ const Roblox_Web_Assets_BatchAssetRequestItem = z.object({
  * @param expectedAssetType
  */
 export const getAliasAlias = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/alias/:alias',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -174,7 +174,7 @@ export const getAliasAlias = endpoint({
  * @param contentRepresentationPriorityList
  */
 export const getAsset = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/asset',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -318,7 +318,7 @@ export const getAsset = endpoint({
  * @param contentRepresentationPriorityList
  */
 export const getAssetidAssetid = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/assetId/:assetId',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -417,7 +417,7 @@ export const getAssetidAssetid = endpoint({
  * @param contentRepresentationPriorityList
  */
 export const getAssetidAssetidVersionVersion = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/assetId/:assetId/version/:version',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -508,7 +508,7 @@ export const getAssetidAssetidVersionVersion = endpoint({
  * @param Roblox-Browser-Asset-Request
  */
 export const postAssetsBatch = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/assets/batch',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -550,7 +550,7 @@ export const postAssetsBatch = endpoint({
  * @param expectedAssetType
  */
 export const getAssetversionidAssetversionid = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/assetVersionId/:assetVersionId',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -637,7 +637,7 @@ export const getAssetversionidAssetversionid = endpoint({
  * @param expectedAssetType
  */
 export const getMarassethashMarassethashMarchecksumMarchecksum = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/marAssetHash/:marAssetHash/marCheckSum/:marCheckSum',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',
@@ -727,7 +727,7 @@ export const getMarassethashMarassethashMarchecksumMarchecksum = endpoint({
  * @param expectedAssetType
  */
 export const getUserassetidUserassetid = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/userAssetId/:userAssetId',
   baseUrl: 'https://assetdelivery.roblox.com',
   requestFormat: 'json',

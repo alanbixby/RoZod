@@ -1,10 +1,10 @@
-import { ExtractParams, ExtractResponse, endpoint, fetchApi, fetchApiPages, fetchApiSplit } from '../index';
-import { getGamesIcons, getUsersAvatarHeadshot, postBatch } from '../endpoints/thumbnailsv1';
-import { getGroupsGroupidMembership } from '../endpoints/groupsv1';
+import { z } from 'zod';
 import { getGamesUniverseidFavoritesCount } from '../endpoints/gamesv1';
 import { getGroupsGroupidGames, getUsersUseridGames } from '../endpoints/gamesv2';
+import { getGroupsGroupidMembership } from '../endpoints/groupsv1';
 import { postPresenceUsers } from '../endpoints/presencev1';
-import { z } from 'zod';
+import { getGamesIcons, getUsersAvatarHeadshot } from '../endpoints/thumbnailsv1';
+import { ExtractParams, endpoint, fetchApi, fetchApiPages, fetchApiSplit } from '../index';
 
 test('fetch game icons', () => {
   fetchApiSplit(
@@ -45,7 +45,7 @@ test('fetch raw', () => {
 // Custom endpoint. Won't work either, as we are not authenticated.
 test('fetch omni recommendations', () => {
   const omni = endpoint({
-    method: 'post',
+    method: 'POST',
     baseUrl: 'https://apis.roblox.com/',
     path: 'discovery-api/omni-recommendation-metadata',
     requestFormat: 'json',

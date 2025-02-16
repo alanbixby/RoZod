@@ -73,7 +73,7 @@ const Roblox_PrivateMessages_Api_Models_SendMessageResponse = z.object({
  * @summary Migrate from RobloxWebsite project, return news notification for Private Message page
  */
 export const getAnnouncements = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/announcements',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -93,7 +93,7 @@ export const getAnnouncements = endpoint({
  * @api GET https://privatemessages.roblox.com/v1/announcements/metadata
  */
 export const getAnnouncementsMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/announcements/metadata',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -113,7 +113,7 @@ export const getAnnouncementsMetadata = endpoint({
  * @param messageTab
  */
 export const getMessages = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/messages',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -150,7 +150,7 @@ export const getMessages = endpoint({
  * @param messageId
  */
 export const getMessagesMessageid = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/messages/:messageId',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -180,7 +180,7 @@ export const getMessagesMessageid = endpoint({
  * @param userId
  */
 export const getMessagesUseridCanMessage = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/messages/:userId/can-message',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -210,7 +210,7 @@ export const getMessagesUseridCanMessage = endpoint({
  * @param body
  */
 export const postMessagesArchive = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/messages/archive',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -241,7 +241,7 @@ export const postMessagesArchive = endpoint({
  * @param body
  */
 export const postMessagesMarkRead = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/messages/mark-read',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -272,7 +272,7 @@ export const postMessagesMarkRead = endpoint({
  * @param body
  */
 export const postMessagesMarkUnread = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/messages/mark-unread',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -303,7 +303,7 @@ export const postMessagesMarkUnread = endpoint({
  * @param body
  */
 export const postMessagesSend = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/messages/send',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -330,7 +330,7 @@ export const postMessagesSend = endpoint({
  * @param body
  */
 export const postMessagesUnarchive = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/messages/unarchive',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',
@@ -360,7 +360,7 @@ export const postMessagesUnarchive = endpoint({
  * @summary Gets unread messages for the authenticated user.
  */
 export const getMessagesUnreadCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/messages/unread/count',
   baseUrl: 'https://privatemessages.roblox.com',
   requestFormat: 'json',

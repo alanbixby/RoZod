@@ -273,7 +273,7 @@ const Roblox_Authentication_Api_Models_RecoverUsernameResponse = z.object({
  * @summary Gets Auth meta data
  */
 export const getAuthMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/auth/metadata',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -286,7 +286,7 @@ export const getAuthMetadata = endpoint({
  * @param body
  */
 export const postIdentityVerificationLogin = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/identity-verification/login',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -313,7 +313,7 @@ export const postIdentityVerificationLogin = endpoint({
  * @param body Roblox.Authentication.Api.Models.LoginRequest.
  */
 export const postLogin = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/login',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -360,7 +360,7 @@ export const postLogin = endpoint({
  * @summary Destroys the current authentication session.
  */
 export const postLogout = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/logout',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -382,7 +382,7 @@ export const postLogout = endpoint({
  * @param body
  */
 export const postLogoutfromallsessionsandreauthenticate = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/logoutfromallsessionsandreauthenticate',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -408,7 +408,7 @@ export const postLogoutfromallsessionsandreauthenticate = endpoint({
  * @summary Get the metadata
  */
 export const getMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/metadata',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -420,7 +420,7 @@ export const getMetadata = endpoint({
  * @summary Returns password status for current user.
  */
 export const getPasswordsCurrentStatus = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/passwords/current-status',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -439,7 +439,7 @@ export const getPasswordsCurrentStatus = endpoint({
  * @param Ticket
  */
 export const getPasswordsReset = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/passwords/reset',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -488,7 +488,7 @@ export const getPasswordsReset = endpoint({
  * @description This will log the user out of all sessions and re-authenticate.
  */
 export const postPasswordsReset = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/passwords/reset',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -530,7 +530,7 @@ export const postPasswordsReset = endpoint({
  * @description Phone target must be a csv with 3 values: "internationalPrefixNumber,nationalNumber,countryCode"
  */
 export const postPasswordsResetSend = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/passwords/reset/send',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -575,7 +575,7 @@ export const postPasswordsResetSend = endpoint({
  * @param body The request model containing the nonce and the solution. Roblox.Authentication.Api.Models.PasswordResetVerificationRequest
  */
 export const postPasswordsResetVerify = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/passwords/reset/verify',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -614,7 +614,7 @@ export const postPasswordsResetVerify = endpoint({
  * @param Password
  */
 export const getPasswordsValidate = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/passwords/validate',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -646,7 +646,7 @@ export const getPasswordsValidate = endpoint({
  * @param body The Roblox.Authentication.Api.Models.PasswordValidationModel.
  */
 export const postPasswordsValidate = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/passwords/validate',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -672,7 +672,7 @@ export const postPasswordsValidate = endpoint({
  * @summary Get metadata for forgot endpoints
  */
 export const getRecoveryMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/recovery/metadata',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -690,7 +690,7 @@ export const getRecoveryMetadata = endpoint({
  * @param ticket Ticket Guid to revert account.
  */
 export const getRevertAccount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/revert/account',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -721,7 +721,7 @@ export const getRevertAccount = endpoint({
  * @param body The Roblox.Authentication.Api.Models.RevertAccountSubmitRequest containing the necessary information to revert account.
  */
 export const postRevertAccount = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/revert/account',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -757,7 +757,7 @@ export const postRevertAccount = endpoint({
  * @param body Roblox.Authentication.Api.Models.SignupRequest
  */
 export const postSignup = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/signup',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -810,7 +810,7 @@ export const postSignup = endpoint({
  * @summary Get metadata for two step verification
  */
 export const getTwostepverificationMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/twostepverification/metadata',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -823,7 +823,7 @@ export const getTwostepverificationMetadata = endpoint({
  * @param body The request.
  */
 export const postTwostepverificationResend = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/twostepverification/resend',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -864,7 +864,7 @@ export const postTwostepverificationResend = endpoint({
  * @param body The request model containing information needed to verify with two step verification.
  */
 export const postTwostepverificationVerify = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/twostepverification/verify',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -903,7 +903,7 @@ export const postTwostepverificationVerify = endpoint({
  * @description The current password is needed for verification that the password can be changed.
  */
 export const postUserPasswordsChange = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/user/passwords/change',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -941,7 +941,7 @@ export const postUserPasswordsChange = endpoint({
  * @param body The Roblox.Authentication.Api.Models.UsernameChangeRequest
  */
 export const postUsername = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/username',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -995,7 +995,7 @@ export const postUsername = endpoint({
  * @description This endpoint can be expanded in the future to include other query parameters such as "startsWith"
  */
 export const getUsernames = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/usernames',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -1017,7 +1017,7 @@ export const getUsernames = endpoint({
  * @param body
  */
 export const postUsernamesRecover = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/usernames/recover',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -1053,7 +1053,7 @@ export const postUsernamesRecover = endpoint({
  * @param Context
  */
 export const getUsernamesValidate = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v2/usernames/validate',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',
@@ -1091,7 +1091,7 @@ export const getUsernamesValidate = endpoint({
  * @param body The Roblox.Authentication.Api.Models.UsernameValidationRequest.
  */
 export const postUsernamesValidate = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v2/usernames/validate',
   baseUrl: 'https://auth.roblox.com',
   requestFormat: 'json',

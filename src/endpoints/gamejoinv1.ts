@@ -200,7 +200,7 @@ const Roblox_GameJoin_Api_TeamCreateResponse = z
  * @param body The Roblox.GameJoin.Api.GameJoinRequest in JSON format
  */
 export const postJoinGame = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/join-game',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -227,7 +227,7 @@ export const postJoinGame = endpoint({
  * @param body The Roblox.GameJoin.Api.JoinGameInstanceRequest in JSON format
  */
 export const postJoinGameInstance = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/join-game-instance',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -254,7 +254,7 @@ export const postJoinGameInstance = endpoint({
  * @param body The Roblox.GameJoin.Api.JoinPlayTogetherGameRequest in JSON format
  */
 export const postJoinPlayTogetherGame = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/join-play-together-game',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -281,7 +281,7 @@ export const postJoinPlayTogetherGame = endpoint({
  * @param body The Roblox.GameJoin.Api.JoinPrivateGameRequest in JSON format
  */
 export const postJoinPrivateGame = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/join-private-game',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -308,7 +308,7 @@ export const postJoinPrivateGame = endpoint({
  * @param body The Roblox.GameJoin.Api.JoinReservedGameRequest in JSON format
  */
 export const postJoinReservedGame = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/join-reserved-game',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -335,7 +335,7 @@ export const postJoinReservedGame = endpoint({
  * @param body The Roblox.GameJoin.Api.PlayWithUserRequest in JSON format
  */
 export const postPlayWithUser = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/play-with-user',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -364,7 +364,7 @@ export const postPlayWithUser = endpoint({
 round-trip would impact client performance.
  */
 export const postTeamCreate = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/team-create',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',
@@ -398,7 +398,7 @@ export const postTeamCreate = endpoint({
 More specifically, it requires Xsrf protection and disables user-agent check so that it can be called from browsers.
  */
 export const postTeamCreatePreemptive = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/team-create-preemptive',
   baseUrl: 'https://gamejoin.roblox.com',
   requestFormat: 'json',

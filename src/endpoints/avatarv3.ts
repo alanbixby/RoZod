@@ -99,7 +99,7 @@ const Roblox_Api_Avatar_Models_OutfitModel = z.object({
 Accepts partial updates.
  */
 export const patchOutfitsUseroutfitid = endpoint({
-  method: 'patch',
+  method: 'PATCH',
   path: '/v3/outfits/:userOutfitId',
   baseUrl: 'https://avatar.roblox.com',
   requestFormat: 'json',
@@ -147,7 +147,7 @@ export const patchOutfitsUseroutfitid = endpoint({
  * @param userOutfitId The user outfit id.
  */
 export const getOutfitsUseroutfitidDetails = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v3/outfits/:userOutfitId/details',
   baseUrl: 'https://avatar.roblox.com',
   requestFormat: 'json',
@@ -180,7 +180,7 @@ export const getOutfitsUseroutfitidDetails = endpoint({
 The name property of the request is optional as one will be auto-generated when the request has a null name.
  */
 export const postOutfitsCreate = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v3/outfits/create',
   baseUrl: 'https://avatar.roblox.com',
   requestFormat: 'json',

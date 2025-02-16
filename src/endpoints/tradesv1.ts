@@ -106,7 +106,7 @@ const Roblox_Trades_Api_NewTradeResponse = z.object({ id: z.number().int() });
  * @param tradeId The trade id.
  */
 export const getTradesTradeid = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/trades/:tradeId',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -136,7 +136,7 @@ export const getTradesTradeid = endpoint({
  * @param tradeId The trade id.
  */
 export const postTradesTradeidAccept = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trades/:tradeId/accept',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -181,7 +181,7 @@ export const postTradesTradeidAccept = endpoint({
  * @param tradeId The trade id.
  */
 export const postTradesTradeidCounter = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trades/:tradeId/counter',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -244,7 +244,7 @@ export const postTradesTradeidCounter = endpoint({
  * @param tradeId The trade id.
  */
 export const postTradesTradeidDecline = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trades/:tradeId/decline',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -288,7 +288,7 @@ export const postTradesTradeidDecline = endpoint({
  * @param sortOrder Sorted by trade creation date
  */
 export const getTradesTradestatustype = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/trades/:tradeStatusType',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -337,7 +337,7 @@ Inbound is the only accepted tradeStatusType.
  * @param tradeStatusType The trade status type to fetch a total count for.
  */
 export const getTradesTradestatustypeCount = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/trades/:tradeStatusType/count',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -367,7 +367,7 @@ export const getTradesTradestatustypeCount = endpoint({
 Expires Outdated Inbound Trades for User
  */
 export const postTradesExpireOutdated = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trades/expire-outdated',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -388,7 +388,7 @@ export const postTradesExpireOutdated = endpoint({
  * @summary Gets metadata about the trade system.
  */
 export const getTradesMetadata = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/trades/metadata',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -406,7 +406,7 @@ export const getTradesMetadata = endpoint({
  * @param body The trade request.
  */
 export const postTradesSend = endpoint({
-  method: 'post',
+  method: 'POST',
   path: '/v1/trades/send',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',
@@ -463,7 +463,7 @@ export const postTradesSend = endpoint({
  * @param userId The other user's id.
  */
 export const getUsersUseridCanTradeWith = endpoint({
-  method: 'get',
+  method: 'GET',
   path: '/v1/users/:userId/can-trade-with',
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json',

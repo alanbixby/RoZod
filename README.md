@@ -91,7 +91,7 @@ To create a custom endpoint, define an EndpointSchema object and export it. Here
 import { z, endpoint } from 'zod';
 
 export const getV1tradesTradeStatusType = endpoint({
-  method: 'get' as const,
+  method: 'GET' as const,
   path: '/v1/trades/:tradeStatusType', // Path parameters are optional
   baseUrl: 'https://trades.roblox.com',
   requestFormat: 'json' as const,
