@@ -411,9 +411,9 @@ async function fetchApi<S extends EndpointSchema, R extends boolean = false>(
         JSON.stringify({ status: response.status, message: robloxError || rawErrorText || error?.description }),
       );
     } else if (requestOptions.throwOnError === true) {
-      throw new Error(robloxError?.errors?.map((e) => e.message).join('; ') || rawErrorText || error?.description);
+      throw new Error(robloxError?.errors?.map((e: { message: any; }) => e.message).join('; ') || rawErrorText || error?.description);
     } else {
-      return robloxError?.errors?.map((e) => e.message).join('; ') || rawErrorText || error?.description;
+      return robloxError?.errors?.map((e: { message: any; }) => e.message).join('; ') || rawErrorText || error?.description;
     }
   }
 
