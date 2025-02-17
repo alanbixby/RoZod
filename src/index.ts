@@ -1,13 +1,13 @@
-import { z } from 'zod';
-import { Cache, ChromeStore, LocalStorageStore, MemoryStore } from './cache';
-import { HBAClient } from 'roblox-bat';
 import {
-  type ParsedChallenge,
-  parseChallengeHeaders,
   GENERIC_CHALLENGE_ID_HEADER,
   GENERIC_CHALLENGE_METADATA_HEADER,
   GENERIC_CHALLENGE_TYPE_HEADER,
+  type ParsedChallenge,
+  parseChallengeHeaders,
 } from 'parse-roblox-errors';
+import { HBAClient } from 'roblox-bat';
+import { z } from 'zod';
+import { Cache, ChromeStore, LocalStorageStore, MemoryStore } from './cache';
 
 type RequestMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 type RequestFormat = 'json' | 'text' | 'form-data';
@@ -98,6 +98,7 @@ type RetryOptions = {
 
 type ErrorOptions = {
   throwOnError?: boolean;
+  throwRaw?: boolean;
 };
 
 type CacheOptions = {
@@ -386,21 +387,39 @@ async function fetchApi<S extends EndpointSchema, R extends boolean = false>(
   );
 
   const error = endpoint.errors?.find(({ status }) => status === response.status);
-  if (error) {
-    if (requestOptions.throwOnError === true) {
-      throw new Error(error.description);
+
+  if (error || !response.ok) {
+    let robloxError: any = null;
+    let rawErrorText: string | null = null;
+
+    try {
+      const data = await response.json();
+      if (data?.errors?.length) {
+        robloxError = data;
+      }
+    } catch {
+      // Fallback to raw text if JSON parsing fails
+      try {
+        rawErrorText = await response.text();
+      } catch {
+        rawErrorText = null;
+      }
+    }
+
+    if (requestOptions.throwRaw === true) {
+      throw new Error(
+        JSON.stringify({ status: response.status, message: robloxError || rawErrorText || error?.description }),
+      );
+    } else if (requestOptions.throwOnError === true) {
+      throw new Error(robloxError?.errors?.map((e) => e.message).join('; ') || rawErrorText || error?.description);
     } else {
-      return error.description as any;
+      return robloxError?.errors?.map((e) => e.message).join('; ') || rawErrorText || error?.description;
     }
   }
 
-  if (requestOptions.returnRaw) {
-    return response;
-  }
+  const responseFormat = response.headers.get('content-type')?.includes('application/json') ? 'json' : 'text';
 
-  const reponseFormat = response.headers.get('content-type')?.includes('application/json') ? 'json' : 'text';
-
-  if (reponseFormat === 'json' && !response.headers.get('content-type')?.includes('application/json')) {
+  if (responseFormat === 'json' && !response.headers.get('content-type')?.includes('application/json')) {
     throw new Error('Invalid response data');
   }
 
@@ -412,12 +431,12 @@ async function fetchApi<S extends EndpointSchema, R extends boolean = false>(
     }, cacheTime);
     cacheToUse.set(
       'rozod_cache:' + cacheKey,
-      reponseFormat === 'json' ? await responseClone.json() : await responseClone.text(),
+      responseFormat === 'json' ? await responseClone.json() : await responseClone.text(),
       cacheTime,
     );
   }
 
-  return reponseFormat === 'json' ? await response.json() : await response.text();
+  return responseFormat === 'json' ? await response.json() : await response.text();
 }
 
 /**
@@ -555,4 +574,4 @@ async function* fetchApiPagesGenerator<S extends EndpointSchema, R extends boole
   }
 }
 
-export { fetchApi, fetchApiSplit, fetchApiPages, fetchApiPagesGenerator, ExtractResponse, ExtractParams, endpoint };
+export { ExtractParams, ExtractResponse, endpoint, fetchApi, fetchApiPages, fetchApiPagesGenerator, fetchApiSplit };
